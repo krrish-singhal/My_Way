@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UdyogFlow : Policies</title>
+    <link rel="stylesheet" href="policy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo-container">
+            <img src="images/factory2.png" alt="Logo" class="logo">
+            <span class="brand-name">उdyogFlow</span>
+        </a>
+        <nav class="menu">
+            <a href="industries.html" class="menu-item">Industries</a>
+            <a href="policy.html" class="menu-item">Policies</a>
+            <a href="about.html" class="menu-item">About</a>
+            <a href="contact.html" class="menu-item">Contact</a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <a href="javascript:history.back()" class="back-button">← Back</a>
+        <section class="policy-section">
+            <h1>Select State and Industry to View Policies</h1>
+
+            <!-- State Dropdown -->
+            <div class="state-selector">
+                <label for="state">Select State:</label>
+                <select id="state" name="state">
+                    <option value="">Select State</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="haryana">Haryana</option>
+                    <option value="uttar">Uttar Pradesh</option>
+                </select>
+            </div>
+
+            <!-- Industry Dropdown -->
+            <div class="industry-selector">
+                <label for="industry">Select Industry:</label>
+                <select id="industry" name="industry">
+                    <option value="textile">Textile Production</option>
+                    <option value="heavy">Heavy Machinery</option>
+                    <option value="electronics">Electronics Manufacturing</option>
+                    <option value="oil-processing">Chemical Processing</option>
+                    <option value="food-processing">Food Processing</option>
+                    <option value="pharmaceutical">Pharmaceutical</option>
+                    <option value="automotive">Automotive</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button onclick="openPolicyPage()">View Policies</button>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>उdyogFlow</h3>
+                <p>Your trusted partner in industrial setup and growth.</p>
+            </div>
+            <div class="footer-center">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="industries.html">Industries</a></li>
+                    <li><a href="policy.html">Policies</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h4>Contact Us</h4>
+                <p>Email: support@udyogflow.com</p>
+                <p>Phone: +91-1234567890</p>
+                <p>Address: 123 Industrial Zone, Tech City</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 उdyogFlow. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function openPolicyPage() {
+            const state = document.getElementById('state').value;
+            const industry = document.getElementById('industry').value;
+
+            if (!state || !industry) {
+                alert('Please select both state and industry!');
+                return;
+            }
+
+            // Map of state and industry to corresponding pages
+            const policyPages = {
+                delhi: {
+                    textile: 'delhi-textile.html',
+                    heavy: 'delhi-heavy.html',
+                    electronics: 'delhi-electronics.html'
+                },
+                haryana: {
+                    textile: 'haryana-textile.html',
+                    heavy: 'haryana-heavy.html',
+                    electronics: 'haryana-electronics.html'
+                },
+                uttar: {
+                    textile: 'uttar-textile.html',
+                    heavy: 'uttar-heavy.html',
+                    electronics: 'uttar-electronics.html'
+                }
+            };
+
+            // Find the corresponding page based on the selection
+            const page = policyPages[state]?.[industry];
+
+            if (page) {
+                // Redirect to the corresponding page
+                window.location.href = page;
+            } else {
+                alert('Policy page for this combination is not available.');
+            }
+        }
+    </script>
+</body>
+
+</html>

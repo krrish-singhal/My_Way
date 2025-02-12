@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UdyogFlow : Industry Setup</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo-container">
+            <img src="images/factory2.png" alt="Logo" class="logo">
+            <span class="brand-name">उdyogFlow</span>
+        </a>
+        <nav class="menu">
+            <a href="industries.html" class="menu-item">Industries</a>
+            <a href="about.html" class="menu-item">About</a>
+            <a href="contact.html" class="menu-item">Contact</a>
+        </nav>
+    </header>
+    <a href="javascript:history.back()" class="back-button">← Back</a>
+    <main class="main">
+        <h1 id="industry-title">Industry Setup Calculator</h1>
+        <form id="industry-form">
+            <label for="num-workers">Number of Workers:</label>
+            <input type="number" id="num-workers" name="num-workers" required>
+
+            <label for="land-area">Land Area (in sq. ft.):</label>
+            <input type="number" id="land-area" name="land-area" required>
+
+            <label for="num-machines">Number of Machines:</label>
+            <input type="number" id="num-machines" name="num-machines" required>
+
+            <label for="project-duration">Project Duration (in months):</label>
+            <input type="number" id="project-duration" name="project-duration" required>
+
+            <button type="submit">Calculate Cost</button>
+        </form>
+        <button id="recommendations-btn">Get Recommendations</button>
+        <div id="results" class="hidden">
+            <h2>Estimated Costs</h2>
+            <p id="total-cost"></p>
+            <ul id="cost-breakdown"></ul>
+        </div>
+        <div id="recommendations" class="hidden">
+            <h2>Recommendations</h2>
+            <ul id="recommendations-list"></ul>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>उdyogFlow</h3>
+                <p>Your trusted partner in industrial setup and growth.</p>
+            </div>
+            <div class="footer-center">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="industries.html">Industries</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h4>Contact Us</h4>
+                <p>Email: support@udyogflow.com</p>
+                <p>Phone: +91-1234567890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 उdyogFlow. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
