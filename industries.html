@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UdyogFlow : Industries</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo-container">
+            <img src="images/factory2.png" alt="Logo" class="logo">
+            <span class="brand-name">उdyogFlow</span>
+        </a>
+        <nav class="menu">
+            <a href="industries.html" class="menu-item">Industries</a>
+            <a href="about.html" class="menu-item">About</a>
+            <a href="contact.html" class="menu-item">Contact</a>
+        </nav>
+    </header>
+    <a href="javascript:history.back()" class="back-button">← Back</a>
+    <main class="main">
+        <h1>Explore Industries</h1>
+        <p>Discover Comprehensive solutions tailored for your specific industry needs</p>
+        <div class="tabs">
+            <div class="tab1" data-industry="heavy-machinery">
+                <div class="heading"><img src="./images/icons8-factory-50.png" alt=""><h2>Heavy Machinery</h2></div>
+                
+                <p>Manufacturing facilities for industrial equipment and heavy machinery production.</p>
+                <div class="hidden-content">
+                    <ul>
+                        <li>Advanced manufacturing capabilities</li>
+                        <li>Robust supply chain network</li>
+                        <li>Quality control systems</li>
+                        <li>Skilled workforce availability</li>
+                    </ul>
+                    <button onclick="selectIndustry('heavy-machinery')">Learn More</button>
+                </div>
+            </div>
+            <div class="tab2" data-industry="electronics">
+                <div class="heading"><img src="images/icons8-chip-50.png" alt=""><h2>Electronics Manufacturing</h2></div>
+                <p>State-of-the-art facilities for electronic components and device production.</p>
+                <div class="hidden-content">
+                    <ul>
+                        <li>Cleanroom facilities</li>
+                        <li>PCB assembly lines</li>
+                        <li>Testing laboratories</li>
+                        <li>R&D infrastructure</li>
+                    </ul>
+                    <button onclick="selectIndustry('electronics')">Learn More</button>
+                </div>
+            </div>
+            <div class="tab3" data-industry="textile">
+                <div class="heading"><img src="images/icons8-scissors-50.png" alt=""><h2>Textile Production</h2></div>
+                <p>Modern textile manufacturing units with comprehensive processing capabilities.</p>
+                <div class="hidden-content">
+                    <ul>
+                        <li>Spinning and weaving units</li>
+                        <li>Dyeing facilities</li>
+                        <li>Quality testing labs</li>
+                        <li>Design studios</li>
+                    </ul>
+                    <button onclick="selectIndustry('textile')">Learn More</button>
+                </div>
+            </div>
+            <div class="tab4" data-industry="food-processing">
+                <div class="heading"><img src="images/icons8-bread-50.png" alt=""><h2>Food Processing</h2></div>
+                <p>State-of-the-art food processing units with strict quality controls.</p>
+                <div class="hidden-content">
+                    <ul>
+                        <li>Cold storage facilities</li>
+                        <li>Packaging units</li>
+                        <li>Quality testing labs</li>
+                        <li>Distribution networks</li>
+                    </ul>
+                    <button onclick="selectIndustry('food-processing')">Learn More</button>
+                </div>
+            </div>
+            <div class="tab5" data-industry="pharmaceutical">
+                <div class="heading"><img src="images/icons8-test-tube-64.png" alt=""><h2>Pharmaceutical</h2></div>
+                <p id="ph">Advanced pharmaceutical manufacturing facilities with research capabilities.</p>
+                <div class="hidden-content">
+                    <ul>
+                        <li>Cleanrooms</li>
+                        <li>Research laboratories</li>
+                        <li>Quality control</li>
+                        <li>Storage facilities</li>
+                    </ul>
+                    <button onclick="selectIndustry('pharmaceutical')">Learn More</button>
+                </div>
+            </div>
+            <div class="tab6" data-industry="automotive">
+                <div class="heading"><img src="images/icons8-car-50.png" alt=""><h2>Automotive</h2></div>
+                <p>Comprehensive automotive manufacturing and assembly facilities.</p>
+                <div class="hidden-content">
+                    <ul>
+                        <li>Assembly lines</li>
+                        <li>Testing facilities</li>
+                        <li>Paint shops</li>
+                        <li>Component manufacturing</li>
+                    </ul>
+                    <button onclick="selectIndustry('automotive')">Learn More</button>
+                </div>
+            </div>
+            <div class="tab7" data-industry="chemical-processing">
+                <div class="heading"><img src="images/icons8-test-tube-64 (1).png" alt=""><h2>Chemical Processing</h2></div>
+                <p>Innovative chemical processing units ensuring environmental safety and efficiency.</p>
+                <div class="hidden-content">
+                    <ul>
+                        <li>Advanced chemical reactors</li>
+                        <li>Emission control systems</li>
+                        <li>Safety protocols</li>
+                        <li>Automated monitoring systems</li>
+                    </ul>
+                    <button onclick="selectIndustry('chemical-processing')">Learn More</button>
+                </div>
+            </div>
+        </div>        
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3><a href="index.html">उdyogFlow</a></h3>
+                <p>Your trusted partner in industrial setup and growth.</p>
+            </div>
+            <div class="footer-center">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h4>Contact Us</h4>
+                <p>Email: support@udyogflow.com</p>
+                <p>Phone: +91-1234567890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 उdyogFlow. All rights reserved.</p>
+        </div> 
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

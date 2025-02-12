@@ -1,0 +1,537 @@
+:root {
+    /* Primary Colors */
+    --color-primary-navy: #1A374D;
+    --color-primary-azure: #4392F1;
+    --color-primary-bg: #F5F5F5;
+
+    /* Accent Colors */
+    --color-accent-green: #2ECC71;
+    --color-accent-orange: #F39C12;
+
+    /* Text Colors */
+    --color-text-dark: #2C3E50;
+    --color-text-light: #7F8C8D;
+
+    /* State Colors */
+    --color-success: #27AE60;
+    --color-warning: #F1C40F;
+    --color-error: #E74C3C;
+
+    /* Semantic Mapping */
+    --color-background: var(--color-primary-bg);
+    --color-header-bg: var(--color-primary-navy);
+    --color-header-text: white;
+    --color-button-primary: #9333ea;
+    --color-button-text: white;
+    --color-button-hover: #7d2aca;
+
+    /* Border Radius */
+    --border-radius-small: 4px;
+    --border-radius-medium: 8px;
+    --border-radius-large: 12px;
+
+    /* Shadows */
+    --shadow-subtle: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.15);
+    --shadow-strong: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--color-primary-bg);
+    color: var(--color-text-dark);
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    background-image: linear-gradient(315deg, #094c3e, #680cb3, #460ee0);
+    padding: 0 5vw;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    transition: font-size 0.5s ease;
+    cursor: pointer;
+}
+
+.name img {
+    height: 65px;
+    border-radius: var(--border-radius-medium);
+    transition: transform 0.5s ease;
+}
+
+.name:hover img {
+    transform: rotate(10deg);
+}
+
+.acc {
+    display: flex;
+    gap: 40px;
+}
+
+.acc div {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+
+.acc div hr {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-success);
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.acc div:hover hr {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+/* Main Section */
+.main {
+    text-align: center;
+    padding: 40px 5vw;
+}
+
+.main h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    color: var(--color-primary-navy);
+}
+
+.main p {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    margin: 10px 0 30px;
+}
+/* Back Button Styling */
+.back-button {
+    display: inline-flex; /* Flex for icon/text alignment */
+    align-items: center; /* Center text/icon vertically */
+    justify-content: center; /* Center text/icon horizontally */
+    width: 120px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    background-color: var(--color-accent-green); /* Primary color */
+    color: #ffffff; /* Text color */
+    text-decoration: none; /* No underline */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth effects */
+}
+
+.back-button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+    transform: translateY(-2px); /* Raise slightly */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+}
+
+.back-button:active {
+    background-color: #003f8a; /* Even darker blue when active */
+    transform: translateY(0); /* Reset position */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .back-button {
+        width: 100px; /* Smaller width on medium screens */
+        height: 35px; /* Smaller height */
+        font-size: 14px; /* Smaller text */
+    }
+}
+
+@media (max-width: 480px) {
+    .back-button {
+        width: 80px; /* Even smaller width on small screens */
+        height: 30px; /* Even smaller height */
+        font-size: 12px; /* Smaller text */
+    }
+}
+
+
+/* Tabs Section */
+.tabs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 180px;
+    padding: 20px;
+    margin-right: 20px;
+    justify-items: center;
+}
+.heading{
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    backdrop-filter: blur(5px);
+    border-radius: 100px;
+    
+}
+.tab2 img{
+    height:45px;
+}
+.tab5 img{
+    height:45px;
+}
+
+.tabs > div {
+    position: relative;
+    background-size:100%;
+    background-position: center;
+    color: #F5F5F5;
+    padding: 20px;
+    text-align: left;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow-strong);
+    transition: all 0.5s ease-in-out; /* Ensures smooth transitions for all properties */
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.tabs > div:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    background-size: 120%; /* Adds a zoom effect on hover */
+    border: 6px solid var(--color-accent-green); /* Optional border effect */
+}
+
+
+.tabs h2 {
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+    z-index: 2;
+    position: relative; /* Ensures it is above hidden content */
+}
+
+.tab5 #ph{
+    color: #4f502c;
+    backdrop-filter: blur(3px);
+}
+
+.hidden-content {
+    position: absolute;
+    backdrop-filter: blur(5px);
+    border-radius: 100px;
+    left: 30px;
+    right: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.3s ease-in-out;
+    color: white;
+    font-size: 1rem;
+    text-align: justify;
+    padding: 10px;
+    border-radius: var(--border-radius-medium);
+    word-wrap: break-word;
+}
+
+.tabs > div:hover .hidden-content {
+    opacity: 1;
+    visibility: visible;
+}
+/* Additional Styling for Buttons */
+.hidden-content button {
+    background-color: var(--color-button-primary);
+    color: var(--color-button-text);
+    border: none;
+    padding: 8px 16px;
+    border-radius: var(--border-radius-medium);
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+li{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+li::marker {
+    color:var(--color-button-primary)
+  }
+
+.hidden-content button:hover {
+    background-color: var(--color-button-hover);
+}
+.footer {
+    background-color: var(--color-primary-navy);
+    color: white;
+    padding: 20px 10vw;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-left h3,
+.footer-center h4,
+.footer-right h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--color-accent-green);
+}
+.footer-left a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-left p,
+.footer-right p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--color-text-light);
+}
+
+.footer-center ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-center ul li {
+    margin: 5px 0;
+}
+
+.footer-center ul li a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-center ul li a:hover {
+    color: var(--color-accent-green);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+    .tabs > div {
+        height: auto;
+        padding: 15px;
+    }
+
+    .hidden-content ul {
+        font-size: 0.9rem;
+    }
+
+    .hidden-content button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+/* Phone-specific Styles */
+@media (max-width: 480px) {
+    /* Navbar Adjustments */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px;
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+
+    .acc {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .acc div {
+        font-size: 1rem;
+    }
+
+    /* Main Section Adjustments */
+    .main {
+        padding: 20px;
+    }
+
+    .main h1 {
+        font-size: 1.8rem;
+    }
+
+    .main p {
+        font-size: 1rem;
+    }
+
+    /* Tabs Section Adjustments */
+    .tabs {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tabs > div {
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px;
+        height: auto;
+    }
+
+    .tabs > div h2 {
+        font-size: 1.2rem;
+    }
+
+    .tabs > div p {
+        font-size: 0.9rem;
+    }
+
+    .hidden-content ul {
+        font-size: 0.8rem;
+    }
+
+    .hidden-content button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    /* Footer Adjustments */
+    .footer-container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: left;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        margin-bottom: 10px;
+    }
+
+    .footer-left h3,
+    .footer-center h4,
+    .footer-right h4 {
+        font-size: 1.2rem;
+    }
+
+    .footer-left p,
+    .footer-right p {
+        font-size: 0.8rem;
+    }
+
+    .footer-center ul li a {
+        font-size: 0.8rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.7rem;
+    }
+}
+
+
+
+
+
+.tabs > div h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.tabs > div p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Tab Background Images */
+.tab1 {
+    background-image: url("images/heavymachine.webp");
+}
+.tabs p{
+    color: aliceblue;
+}
+
+.tab2 {
+    background-image: url("images/electronics.jpg");
+}
+.tab3 {
+    background-image: url("images/textile.jpg");
+}
+.tab4 {
+    background-image: url("images/food.jpg");
+}
+.tab5 {
+    background-image: url("images/pharma.jpg");
+}
+.tab6 {
+    background-image: url("images/auto.webp");
+}
+.tab7 {
+    background-image: url("images/chemical.jpg");
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tabs > div {
+        height: 200px;
+    }
+
+    .tabs > div h2 {
+        font-size: 1.2rem;
+    }
+
+    .tabs > div p {
+        font-size: 0.9rem;
+    }
+}
+
+
